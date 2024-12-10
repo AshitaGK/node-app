@@ -8,7 +8,7 @@ on:
 jobs:
   # Job to build, test, and push Docker image to the registry
   build-and-deploy:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner for the build
+    runs-on: ubuntu-latest  
 
     steps:
     # Step 1: Checkout the code
