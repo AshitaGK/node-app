@@ -15,6 +15,6 @@ template:
    spec:
      containers:
       - name: node-app
-        image: dockerhub_username/node-app
+        image: ashitag06/node-app:v1
         ports:
          - containerPort: 3000
