@@ -27,8 +27,8 @@ The pipeline is defined in `.github/workflows/ci-cd.yml` and consists of **2** m
 
 ## Deployment Steps
 - **Configure Secrets** in your GitHub repository for the following:
-   1. `DOCKERHUB_USERNAME`: Your Docker Hub username for login.
-   2. `DOCKERHUB_PASSWORD`: Docker Hub password for login.
+   1. `DOCKER_USERNAME`: Your Docker Hub username for login.
+   2. `DOCKER_PASSWORD`: Docker Hub password for login.
    3. `KUBE_CONFIG`: Base64 encode Kubernetes config file.
    4. `SLACK_WEBHOOK_URL`: The WebHook URL for notification.
 
