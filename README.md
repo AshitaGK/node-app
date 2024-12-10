@@ -1,16 +1,40 @@
 # CI/CD Pipeline of Node.js application using GitHub Actions
-## Step 1: Create a basic Node.js using Express
-For this project, we create a standard Hello World! application using Express.
-## Step 2: Containerize Node.js Application
-Created a simple Dockerfile within Node.js project directory.
-### Step 2.1: Build the Docker Image
-Once the Dockerfile is created, build the Docker Image.Eg:
-```
-docker build -t docker_username/node-app .
-```
-### Sep 2.2: Push Image to Docker Hub
-```
-docker push docker_username/node-app:tagname
-```
+Table of Contents
+- Introduction
+- Features
+- Prerequisites
+- CI/CD Pipeline Overview
+- Deployment Steps
+
+## Introduction
+This basic Node.js application is a practical example of automating deployment process of a Kubernetes cluster using GitHub Actions. 
+
+## Features
+* **Docker Integration:** Building Docker Image and pushing the image to a container registry(in this case, to Docker Hub) seamlessly.
+* **Kubernetes Deployment:** Deploying the application to a Kubernetes cluster with a single push.
+* **Notification:** Receive real-time notification alert on Slack for deployment success or failure.
+
+## Prerequisite
+Ensure the following are installed:
+* Node.js and npm
+* Docker installed
+* Access to Kubernetes cluster(e.g., Minikube for local development or EKS,GKE,etc for production deployment.)
+  
+## CI/CD Pipeline overview:
+The pipeline is defined in `.github/workflows/ci-cd.yml` and consists of **2** main jobs:
+ 1. **Build:** Build the Docker image.
+ 2. **Deploy:** Deploy the image to Kubernetes cluster **and** send notification.
+
+## Deployment Steps
+1. **Configure Secrets** in your GitHub repository for the following:
+   *`DOCKERHUB_USERNAME`: Your Docker Hub username for login.
+   *`DOCKERHUB_PASSWORD`: Docker Hub password for login.
+   *`KUBE_CONFIG`: Base64 encode Kubernetes config file.
+   *`SLACK_WEBHOOK_URL`: The WebHook URL for notification.
+
+2. **Pull request** to run tasks automatically on the `main` branch.
+   
+
+
 
 
