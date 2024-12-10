@@ -26,13 +26,13 @@ The pipeline is defined in `.github/workflows/ci-cd.yml` and consists of **2** m
  2. **Deploy:** Deploy the image to Kubernetes cluster **and** send notification.
 
 ## Deployment Steps
-1. **Configure Secrets** in your GitHub repository for the following:
-   *`DOCKERHUB_USERNAME`: Your Docker Hub username for login.
-   *`DOCKERHUB_PASSWORD`: Docker Hub password for login.
-   *`KUBE_CONFIG`: Base64 encode Kubernetes config file.
-   *`SLACK_WEBHOOK_URL`: The WebHook URL for notification.
+- **Configure Secrets** in your GitHub repository for the following:
+   1. `DOCKERHUB_USERNAME`: Your Docker Hub username for login.
+   2. `DOCKERHUB_PASSWORD`: Docker Hub password for login.
+   3. `KUBE_CONFIG`: Base64 encode Kubernetes config file.
+   4. `SLACK_WEBHOOK_URL`: The WebHook URL for notification.
 
-2. **Pull request** to run tasks automatically on the `main` branch.
+- **Pull request** to run tasks automatically on the `main` branch.
    
 
 
