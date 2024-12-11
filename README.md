@@ -1,4 +1,5 @@
 # CI/CD Pipeline of Node.js application using GitHub Actions
+[![CI/CD Pipeline for Node.js application](https://github.com/AshitaGK/node-app/actions/workflows/ci-cd.yml/badge.svg?branch=main&event=deployment)](https://github.com/AshitaGK/node-app/actions/workflows/ci-cd.yml)
 Table of Contents
 - Introduction
 - Features
